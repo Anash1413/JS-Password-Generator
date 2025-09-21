@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anash's Password-Generator</title>
+    <style>
+         .card{
+            -webkit-backdrop-filter: blur(40px);
+            backdrop-filter: blur(40px);
+         }
+         .btn-grad {background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff  51%, #ff6e7f  100%)}
+         .btn-grad {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: rgb(34, 33, 33);   
+                     
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
+          
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
+        .sokla{
+            background-image: radial-gradient( circle farthest-corner at 14.2% 27.5%,  rgba(104,199,255,1) 0%, rgba(181,126,255,1) 90% );
+        }.first-circle {
+    position: absolute;
+   
+    border-radius: 50%;
+    box-shadow: 8px 8px 15px 0 rgb(57, 235, 208),
+                -8px -8px 15px 4px rgb(53, 224, 240);
+    animation: mov 10s infinite linear;
+    transition: all 1s linear;
+}
+
+@keyframes mov {
+    0%   { left: 32%; top: 20%; }
+    5.5% { left: 45%; top: 35%; }
+    11%  { left: 65%; top: 50%; }
+    16.5%{ left: 82%; top: 60%; }
+    22%  { left: 70%; top: 80%; }
+    27.5%{ left: 50%; top: 85%; }
+    33%  { left: 28%; top: 75%; }
+    38.5%{ left: 12%; top: 60%; }
+    44%  { left: 8%;  top: 40%; }
+    49.5%{ left: 15%; top: 22%; }
+    55%  { left: 30%; top: 10%; }
+    60.5%{ left: 50%; top: 8%; }
+    66%  { left: 72%; top: 15%; }
+    71.5%{ left: 85%; top: 30%; }
+    77%  { left: 78%; top: 50%; }
+    82.5%{ left: 62%; top: 68%; }
+    88%  { left: 40%; top: 72%; }
+    93.5%{ left: 28%; top: 55%; }
+    100% { left: 32%; top: 20%; } 
+}
+
+.second-circle {
+    position: absolute;
+    
+    border-radius: 50%;
+    box-shadow: 8px 8px 15px 0 rgb(114, 76, 171),
+                -8px -8px 15px 4px rgb(153, 98, 196);
+    animation: mvel 10s infinite linear;
+    transition: all 1s linear;
+}
+
+@keyframes mvel {
+    0%   { left: 59%; top: 63%; }
+    5.5% { left: 72%; top: 55%; }
+    11%  { left: 85%; top: 40%; }
+    16.5%{ left: 78%; top: 22%; }
+    22%  { left: 60%; top: 10%; }
+    27.5%{ left: 42%; top: 15%; }
+    33%  { left: 25%; top: 28%; }
+    38.5%{ left: 15%; top: 45%; }
+    44%  { left: 20%; top: 65%; }
+    49.5%{ left: 32%; top: 78%; }
+    55%  { left: 50%; top: 85%; }
+    60.5%{ left: 70%; top: 78%; }
+    66%  { left: 82%; top: 65%; }
+    71.5%{ left: 75%; top: 48%; }
+    77%  { left: 62%; top: 32%; }
+    82.5%{ left: 45%; top: 25%; }
+    88%  { left: 38%; top: 42%; }
+    93.5%{ left: 50%; top: 55%; }
+    100% { left: 59%; top: 63%; }
+}
+
+         .fourth-circle{
+            box-shadow: 8px 8px 15px 0 rgb(182, 221, 26)
+            ,  -8px -8px 15px 4px rgb(240, 218, 53);
+            animation: 3s infinite linear move;
+            transition: all 1s linear;
+           
+        }
+        @keyframes move {
+            0%{
+               left: 32%; 
+            }
+            
+            20%{
+                right:  82%;
+                top: 53%;
+            }  
+            40%{
+                left: 12%;
+                top: 79%;
+            }  
+            60%{
+                left: 8%;
+                top: 19%;
+            }  
+            80%{
+                right: 85%;
+                top: 22%;
+            }   
+            
+            100%{
+                left: 32%;
+            }
+            
+        }
+        .third-circle{
+            box-shadow: 8px 8px 15px 0 rgb(114, 76, 171)
+            ,  -8px -8px 15px 4px rgb(153, 98, 196);
+            animation: 5s infinite linear movel;
+            transition: all 1s linear;
+          
+        }
+       @keyframes move {
+            0% { left: 50%; top: 10%; transform: translate(-50%, -50%) scale(1); }
+            5% { left: 63%; top: 12%; transform: translate(-50%, -50%) scale(1.05); }
+            10% { left: 75%; top: 20%; transform: translate(-50%, -50%) scale(1.1); }
+            15% { left: 83%; top: 30%; transform: translate(-50%, -50%) scale(1.15); }
+            20% { left: 90%; top: 50%; transform: translate(-50%, -50%) scale(1.2); }
+            25% { left: 88%; top: 68%; transform: translate(-50%, -50%) scale(1.15); }
+            30% { left: 80%; top: 80%; transform: translate(-50%, -50%) scale(1.1); }
+            35% { left: 68%; top: 88%; transform: translate(-50%, -50%) scale(1.05); }
+            40% { left: 50%; top: 90%; transform: translate(-50%, -50%) scale(1); }
+            45% { left: 32%; top: 88%; transform: translate(-50%, -50%) scale(0.95); }
+            50% { left: 20%; top: 80%; transform: translate(-50%, -50%) scale(0.9); }
+            55% { left: 12%; top: 68%; transform: translate(-50%, -50%) scale(0.85); }
+            60% { left: 10%; top: 50%; transform: translate(-50%, -50%) scale(0.8); }
+            65% { left: 12%; top: 32%; transform: translate(-50%, -50%) scale(0.85); }
+            70% { left: 20%; top: 20%; transform: translate(-50%, -50%) scale(0.9); }
+            75% { left: 32%; top: 12%; transform: translate(-50%, -50%) scale(0.95); }
+            80% { left: 45%; top: 8%; transform: translate(-50%, -50%) scale(1); }
+            90% { left: 55%; top: 8%; transform: translate(-50%, -50%) scale(1.05); }
+            100% { left: 50%; top: 10%; transform: translate(-50%, -50%) scale(1); }
+        }
+
+        @keyframes movel {
+            0% { left: 50%; top: 90%; transform: translate(-50%, -50%) scale(1); }
+            5% { left: 37%; top: 88%; transform: translate(-50%, -50%) scale(0.95); }
+            10% { left: 25%; top: 80%; transform: translate(-50%, -50%) scale(0.9); }
+            15% { left: 17%; top: 70%; transform: translate(-50%, -50%) scale(0.85); }
+            20% { left: 10%; top: 50%; transform: translate(-50%, -50%) scale(0.8); }
+            25% { left: 12%; top: 32%; transform: translate(-50%, -50%) scale(0.85); }
+            30% { left: 20%; top: 20%; transform: translate(-50%, -50%) scale(0.9); }
+            35% { left: 32%; top: 12%; transform: translate(-50%, -50%) scale(0.95); }
+            40% { left: 50%; top: 10%; transform: translate(-50%, -50%) scale(1); }
+            45% { left: 68%; top: 12%; transform: translate(-50%, -50%) scale(1.05); }
+            50% { left: 80%; top: 20%; transform: translate(-50%, -50%) scale(1.1); }
+            55% { left: 88%; top: 32%; transform: translate(-50%, -50%) scale(1.15); }
+            60% { left: 90%; top: 50%; transform: translate(-50%, -50%) scale(1.2); }
+            65% { left: 88%; top: 68%; transform: translate(-50%, -50%) scale(1.15); }
+            70% { left: 80%; top: 80%; transform: translate(-50%, -50%) scale(1.1); }
+            75% { left: 68%; top: 88%; transform: translate(-50%, -50%) scale(1.05); }
+            80% { left: 55%; top: 92%; transform: translate(-50%, -50%) scale(1); }
+            90% { left: 45%; top: 92%; transform: translate(-50%, -50%) scale(0.95); }
+            100% { left: 50%; top: 90%; transform: translate(-50%, -50%) scale(1); }
+        }
+    </style>
+  <link rel="stylesheet" crossorigin href="/assets/index-DEqgv9Kk.css">
+</head>
+<body class="w-[100vw] h-[100vh]  ">
+    <div class="w-[100vw] h-[100vh] sokla  flex flex-col justify-center items-center">
+      
+       <!-- cicle strt  -->
+        <div class="w-[140px] h-[140px] absolute  top-[15%] left-[32%] first-circle  bg-[#48d3a0] rounded-full">
+         </div>    
+        <div class="w-[200px] h-[200px] absolute  top-[65%] left-[52%] second-circle  bg-purple-500 rounded-full">
+         </div>   
+         <div class="w-[140px] h-[140px] absolute  top-[15%] left-[32%] third-circle  bg-[#a1156e] rounded-full">
+         </div>    
+        <div class="w-[200px] h-[200px] absolute  top-[65%] left-[52%] fourth-circle  bg-[#ce980f] rounded-full">
+         </div>  
+          <!-- crcle enḍ  -->
+  <div class="card space-y-5 rounded-4xl p-8">
+          <h1 class="uppercase bg-clip-text text-transparent heading bg-[url('/images/bg.jpeg')]  text-[38px] font-bold">Password Generator</h1>
+        <!-- passeord show  -->
+        <div class= "flex p-4 w-[450px] rounded-2xl  shadow-2xl shadow-black justify-between bg-[rgba(104,199,255,1)]">
+            <div passwordText class=" bg-clip-text text-transparent heading font-bold text-2xl bg-[url('/images/textbg.jpg')]">
+                PASSWORD
+            </div>
+          
+            <!-- coppy  -->
+           <button class="relative" aria-label="copy">
+            <span copyMsg class="absolute top-[-100%] scale-0 rounded-3xl p-1 bg-amber-600 left-[-170%] w-[80px]">copied !!</span>
+             <img copyBtn src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20width='96px'%20height='96px'%20viewBox='0%200%2024%2024'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3ctitle%3ecopy_2_line%3c/title%3e%3cg%20id='页面-1'%20stroke='none'%20stroke-width='1'%20fill='none'%20fill-rule='evenodd'%3e%3cg%20id='File'%20transform='translate(-96.000000,%20-288.000000)'%3e%3cg%20id='copy_2_line'%20transform='translate(96.000000,%20288.000000)'%3e%3cpath%20d='M24,0%20L24,24%20L0,24%20L0,0%20L24,0%20Z%20M12.5934901,23.257841%20L12.5819402,23.2595131%20L12.5108777,23.2950439%20L12.4918791,23.2987469%20L12.4918791,23.2987469%20L12.4767152,23.2950439%20L12.4056548,23.2595131%20C12.3958229,23.2563662%2012.3870493,23.2590235%2012.3821421,23.2649074%20L12.3780323,23.275831%20L12.360941,23.7031097%20L12.3658947,23.7234994%20L12.3769048,23.7357139%20L12.4804777,23.8096931%20L12.4953491,23.8136134%20L12.4953491,23.8136134%20L12.5071152,23.8096931%20L12.6106902,23.7357139%20L12.6232938,23.7196733%20L12.6232938,23.7196733%20L12.6266527,23.7031097%20L12.609561,23.275831%20C12.6075724,23.2657013%2012.6010112,23.2592993%2012.5934901,23.257841%20L12.5934901,23.257841%20Z%20M12.8583906,23.1452862%20L12.8445485,23.1473072%20L12.6598443,23.2396597%20L12.6498822,23.2499052%20L12.6498822,23.2499052%20L12.6471943,23.2611114%20L12.6650943,23.6906389%20L12.6699349,23.7034178%20L12.6699349,23.7034178%20L12.678386,23.7104931%20L12.8793402,23.8032389%20C12.8914285,23.8068999%2012.9022333,23.8029875%2012.9078286,23.7952264%20L12.9118235,23.7811639%20L12.8776777,23.1665331%20C12.8752882,23.1545897%2012.8674102,23.1470016%2012.8583906,23.1452862%20L12.8583906,23.1452862%20Z%20M12.1430473,23.1473072%20C12.1332178,23.1423925%2012.1221763,23.1452606%2012.1156365,23.1525954%20L12.1099173,23.1665331%20L12.0757714,23.7811639%20C12.0751323,23.7926639%2012.0828099,23.8018602%2012.0926481,23.8045676%20L12.108256,23.8032389%20L12.3092106,23.7104931%20L12.3186497,23.7024347%20L12.3186497,23.7024347%20L12.3225043,23.6906389%20L12.340401,23.2611114%20L12.337245,23.2485176%20L12.337245,23.2485176%20L12.3277531,23.2396597%20L12.1430473,23.1473072%20Z'%20id='MingCute'%20fill-rule='nonzero'%3e%3c/path%3e%3cpath%20d='M9,2%20C7.89543,2%207,2.89543%207,4%20L7,6%20L9,6%20L9,4%20L20,4%20L20,15%20L18,15%20L18,17%20L20,17%20C21.1046,17%2022,16.1046%2022,15%20L22,4%20C22,2.89543%2021.1046,2%2020,2%20L9,2%20Z%20M4,7%20C2.89543,7%202,7.89543%202,9%20L2,20%20C2,21.1046%202.89543,22%204,22%20L15,22%20C16.1046,22%2017,21.1046%2017,20%20L17,9%20C17,7.89543%2016.1046,7%2015,7%20L4,7%20Z%20M4,9%20L15,9%20L15,20%20L4,20%20L4,9%20Z'%20id='形状'%20fill='%236CF9F2FF'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e"
+            class="cursor-pointer" height="25px" width="25px" alt="">
+           </button>
+        </div>
+        <!-- generate card  -->
+         <div class="w-[450px] text-white text-[20px] space-y-5 p-4  ">
+            <div class="flex justify-between font-bold text-2xl">
+                <h1 >Password Length</h1>
+                <p  passwordLength>0</p>
+            </div>
+            <input lengthSlider  class=" w-full  " type="range" step="1" min="1" s max="20">
+            <!-- checkbxs  -->
+            
+                <div class="flex gap-x-3">
+                    <input type="checkbox" uppercase id="uppercase">
+                    <label for="uppercase">Include Uppercase Letters</label>
+                </div>
+
+                 <div class="flex gap-x-3 ">
+                    <input type="checkbox" lowercase id="lowercase">
+                    <label for="lowercase">Include Lowercase Letters</label>
+                </div>
+
+                 <div class="flex gap-x-3">
+                    <input type="checkbox" numbers id="numbers">
+                    <label for="numbers">Include Numbers</label>
+                </div>
+
+                 <div class="flex gap-x-3">
+                    <input type="checkbox" symbols id="symbols">
+                    <label for="symbols">Include Symbols</label>
+                </div>
+                
+                <!-- strenth  -->
+                 <div class="flex justify-between">
+                    <h1 class="text-2xl">Strength</h1>
+                    <div strengthCol class=" h-5 w-5 bg-white rounded-full shadow shadow-amber-50"></div>
+                 </div>
+
+                 <!-- button  -->
+                  <button generatePassword class="uppercase w-full btn-grad">generate Password</button>
+         </div>
+       </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
